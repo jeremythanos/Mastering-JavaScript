@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ejercicio de cofla" />
+    <meta name="keywords" content="cofla13" />
+    <meta name="author" content="Thanos" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Cofla problema #13</title>
+  </head>
+  <body>
+    <!-- botones para optener los datos que queremos del usurario al ser presionado -->
+    <button id="getInfo" class="css-button">
+      <span class="css-button-icon">
+        <i class="fa fa-print"></i>
+      </span>
+      | Obtener Informacion
+    </button>
+
+    <div class="resultado">
+      <!--este contenedor es donde se muestra el resultado-->
+      <div class="aprobados">Aprobados: <b class="num-aprobados"></b></div>
+      <div class="desaprobados">
+        Desaprobados: <b class="num-desaprobados"></b>
+      </div>
+    </div>
+    <!-- aqui van todos los script que estaremos usando para este ejercicio -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

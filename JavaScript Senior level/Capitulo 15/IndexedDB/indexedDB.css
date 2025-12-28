@@ -1,0 +1,163 @@
+:root {
+    /* Paleta de colores "Thanos" */
+    --bg-color: #292D3E;
+    --card-bg: #32364a;
+    --primary: #8da4ef; /* Azul suave */
+    --accent: #c084fc;  /* Purpura Thanos */
+    --danger: #ff7b7b;  /* Rojo suave */
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --glow: 0 0 15px rgba(192, 132, 252, 0.4);
+}
+
+body {
+    background-color: var(--bg-color);
+    /* Un degradado sutil de fondo para dar profundidad */
+    background-image: radial-gradient(circle at top, #3b4055 0%, var(--bg-color) 60%);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* --- PARTE 1: INPUT Y BOTÓN AGREGAR --- */
+.add-nombres {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#nombre {
+    padding: 12px 20px;
+    background-color: var(--card-bg);
+    border: 2px solid #444;
+    border-radius: 12px; /* Bordes más redondos */
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Suaviza la animación */
+    width: 250px;
+}
+
+/* Efecto cuando haces click en el input */
+#nombre:focus {
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+    transform: scale(1.02);
+}
+
+#add {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#add:hover {
+    transform: translateY(-2px); /* Se eleva un poco */
+    box-shadow: 0 10px 20px -5px rgba(192, 132, 252, 0.5);
+}
+
+#add:active {
+    transform: scale(0.95); /* Efecto de click */
+}
+
+/* --- PARTE 2: LISTA DE NOMBRES --- */
+.nombres {
+    width: 90%;
+    max-width: 600px;
+    margin: 4rem auto 0 auto;
+    /* Quitamos el borde simple y usamos espacio */
+    border-top: none; 
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre cada tarjeta */
+}
+
+/* CADA FILA (Ahora parecen tarjetas flotantes) */
+.classnombre {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 15px 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: none; /* Quitamos la linea vieja */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s;
+    border: 1px solid transparent;
+}
+
+/* Efecto al pasar el mouse por encima de la fila */
+.classnombre:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: #383d52;
+}
+
+.classnombre h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Un poco más elegante */
+    color: var(--text-main);
+    letter-spacing: 1px; /* Espaciado entre letras */
+    
+    /* Mantenemos tu lógica de centrado */
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 120px;
+}
+
+.options {
+    display: flex;
+    gap: 10px; /* Separación entre botones */
+}
+
+.options button {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón Guardar */
+.posible {
+    color: var(--primary);
+    background-color: rgba(141, 164, 239, 0.1);
+}
+.posible:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.imposible {
+    color: var(--text-muted);
+}
+
+/* Botón Eliminar */
+.delete {
+    color: var(--danger);
+    background-color: rgba(255, 123, 123, 0.1);
+}
+
+.delete:hover {
+    background-color: var(--danger);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 123, 123, 0.4);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Reader</title>
+    <meta name="description" content="esta es los ejercicios para usar file reader">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <input type="file"  id="archivo" multiple>
+        <!-- creamos un div para el metedo filereader, read as url -->
+            <div class="resultado"></div>
+    </main>
+<!-- aqui van los estilos para no hacer otra pagina -->
+    <style>
+        body{
+            color: #222;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        img{
+            width: 300px;
+        }
+    </style>
+
+    <script src="./fileReader.js?v=4"></script>
+</body>
+</html>
+
+"use strict";
+
+const archivo = document.getElementById('archivo');
+    archivo.addEventListener('change', (e) => {
+                leerArchivo(archivo.files)
+});
+
+
+// ----> para archivos de texto <-----
+
+// const leerArchivo = ar => {
+//         for (let index = 0; index < ar.length; index++) {
+//             const reader  = new FileReader();
+//                 reader.readAsText(ar[index]);
+//                 reader.addEventListener("load",(e)=>{
+//                     console.log(JSON.parse(e.currentTarget.result));
+//                 })
+//         }
+// }
+
+// ----> para archivos de imagenes,url y mas <-----
+const leerArchivo = ar => {
+    for (let index = 0; index < ar.length; index++) {
+        const reader  = new FileReader();
+            reader.readAsDataURL(ar[index]);
+            reader.addEventListener("load",(e)=>{
+                let newImg = `<img src='${e.currentTarget.result}'>`;
+                document.querySelector(".resultado").innerHTML += newImg;
+            })
+    }
+}
+

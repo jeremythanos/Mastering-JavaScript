@@ -1,0 +1,31 @@
+.grid-container{
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4,minmax(min-content,max-content));
+    grid-auto-rows: 50px;
+}
+
+.grid-container .gird-item{
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius:5px;
+    margin: 3px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ededed
+}
+
+.gird-item{
+    color: rgb(18, 83, 235);
+}
+
+.boton-confirmar{
+    padding: 9px 40px;
+    background: #489;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    margin: 30px auto;
+}

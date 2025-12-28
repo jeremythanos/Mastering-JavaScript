@@ -1,0 +1,44 @@
+body{
+    color: black;
+    background-color: rgb(252, 252, 252);
+    padding: 0;
+    margin: 0;
+}
+
+.texturas{
+    margin: 10px;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    user-select: none;
+}
+/* este bloque de codgo sera donde se cargaran las texturas */
+.texturas div{
+display: inline-block;
+width: 50px;
+height: 50px;
+margin: 6px;
+}
+.texturas div:active{
+    opacity: 0.55;
+}
+
+/* para agregar las imagenes para las texturas */
+.textura1 {
+background: url("color-mamei.jpg");
+}
+.textura2 {
+    background: url("color-azul.jpg");
+}
+.textura3 {
+    background: url("color-rosado.jpg");
+}
+
+/* para las zonas donde se van arrastrar las imagenes */
+
+.zona{
+    margin: 10px;
+    background: #edb0b069;
+    height: 200px;
+    border-radius: 4px;
+}

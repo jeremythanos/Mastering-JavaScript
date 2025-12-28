@@ -1,0 +1,27 @@
+Introducción a Window:
+
+    - Hereda las propiedades de EventTarget 
+    - open() - Carga un recurso en el contexto de un nuevo navegador o uno que ya existe.
+    window.open("https://youtube.com")
+
+    -close() - cierra la ventana actual, o la ventana en la que se llamo.
+    -closed - indica si la ventana referenciada esta cerrada o no.
+    -name - obtiene / establece el nombre del contexto de exploración de la ventana.
+    -stop() - detiene la carga de recursos en el contexto de navegación actual.
+    -alert() - muestra un cuadro de alerta con el contenido especificado y un boton Aceptar.
+    -print() - Abre el cuadro de dialogo Imprimir para imprimir el documento actual.
+    -prompt() - Abre un cuadro de dialogo con un mensaje que solicita al usuario un dato (String)
+
+    -confirm() - Abre un cuadro de dialogo con un mensaje y dos botones: Aceptar y Cancelar.
+    confirm("quieres salir?")
+
+- screen - devuelve una referencia al objeto de pantalla asociado con la ventana.
+const screen = window.screen;
+console.log(screen);
+document.write(screen);
+
+- screenLeft - devuelve la distancia horizontal entre el borde izquierdo del navegador y el borde izquierdo de la pantalla
+screenTop - devuelve la distancia vertical entre el borde superior del navegador y el borde superior de la pantalla
+scrollx - devuelve el numero de pixeles que el documento se desplaza actualmente horizontalmente.
+- scrolly - devuelve el número de pixeles que el documento se desplaza actualmente verticalmente.
+s

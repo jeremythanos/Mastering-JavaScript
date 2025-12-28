@@ -1,0 +1,25 @@
+body {
+  color: #000;
+  font-family: arial;
+}
+
+#getInfo {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.resultado {
+  background-color: #e0d4b5;
+  width: 60%;
+  color: #000;
+  font-family: arial;
+  font-size: 20px;
+  border-radius: 14px;
+  letter-spacing: 1.5px;
+  padding: 20px;
+}
+
+.css-button {
+  background: #b0e2ff;
+  border-radius: 10px;
+}

@@ -1,0 +1,60 @@
+body{
+    color: #222;
+    font-family: arial;
+    overflow-x: hidden;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item{
+    flex-grow: 1;
+    margin: 20px;
+    max-width: 300px;
+    border: #222 solid 1px;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+/* un  hover  */
+.flex-item:hover{
+    border-color: #71a154;
+    box-shadow: 0 0 30px #31a154;
+}
+.flex-item:focus{
+    border-color: #71a154;
+    box-shadow: 0 0 30px #31a154;
+}
+
+
+img{
+    width: 120px;
+}
+
+h3{
+    color:#333
+}
+
+p b{
+    color: #508845;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+
+input[type="submit"]{
+    background: #31a154;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 28px;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
