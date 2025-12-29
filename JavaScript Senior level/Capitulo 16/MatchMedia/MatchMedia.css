@@ -2,6 +2,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #a86161;
+    background-color: #292D3E;
     color: white;
 }
+
+.caja{
+width: 300px;
+height: 300px;
+display: flex;
+background:#489 ;
+font-size: 40px;
+}
+.caja span, .responsive-caja span{
+    margin: auto;
+}
+
+.responsive-caja{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background:#48e ;
+    font-size: 40px;
+    }
